@@ -13,10 +13,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class Chassis extends Subsystem {
-  private PWMTalonSRX master1;
-  private PWMTalonSRX master2;
-  private PWMTalonSRX master3;
-  private PWMTalonSRX master4;
+  private PWMTalonSRX rightMaster;
+  private PWMTalonSRX leftMaster;
 
   @Override
   public void initDefaultCommand() {
