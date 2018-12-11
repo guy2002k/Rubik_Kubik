@@ -7,7 +7,9 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.PWMTalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
  * Add your docs here.
@@ -15,6 +17,21 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Chassis extends Subsystem {
   private PWMTalonSRX rightMaster;
   private PWMTalonSRX leftMaster;
+  private PWMTalonSRX rightSlave;
+  private PWMTalonSRX leftSlave;
+  private DifferentialDrive drive;
+  private Chassis instance;
+
+  public Chassis getInstance(){
+    if(instance==null)
+     instance=new Chassis();
+    return instance; 
+  }
+
+  public Chassis() {
+    
+  }
+
 
   @Override
   public void initDefaultCommand() {
